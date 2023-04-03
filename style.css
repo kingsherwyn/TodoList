@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #f6d365, #fda085);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+#ui {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header, form {
+    width: 100%;
+    max-width: 584px;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    justify-content: space-between;
+}
+
+.input-wrap {
+    display: flex;
+    width: calc(100% - 180px);
+}
+
+form input, form button {
+    outline: none;
+    background-color: white;
+    border: none;
+    padding: 0.5rem;
+    height: 59px;
+    font-size: 1.5rem;
+}
+
+form input {
+    width: calc(100% - 40px);
+}
+
+form button {
+    background: white;
+    cursor: pointer;
+    background: #ff6f47;
+    width: 56px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+form button .material-icons{
+    font-size: 25px;
+}
+
+.todo-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.todo-list {
+    
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.delete-btn, .complete-btn {
+    background: #ff6f47;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.complete-btn {
+    background: rgb(73,204,73);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.material-icons {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+select, .select {
+    height: 59px;
+}
+
+.select {
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #ff6f47;
+    width: 160px;;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.8rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: #ff6f47;
+}
+
+option {
+    font-size: 16px;
+    padding-bottom:10px;
+}
+
+@media screen and (max-width: 599px) {
+    form {
+        flex-direction: column-reverse;
+    }
+
+    .input-wrap {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px;
+    }
+
+    .select {
+        margin-right: 12px;
+        align-self: flex-end;
+    }
+
+    .todo-list {
+        margin: 4px;
+        font-size: 14px;
+    }
+}
+
